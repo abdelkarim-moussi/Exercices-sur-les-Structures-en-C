@@ -18,9 +18,8 @@ typedef struct livre
 }livre;
 
 livre r_livre(livre l,const char* t){
-  strncpy(l.titre, t, sizeof(l.titre) - 1);
-    l.titre[sizeof(l.titre) - 1] = '\0'; // Ensure null termination
-    return l;
+  strcpy(l.titre, t);
+  return l;
 }
 
 
